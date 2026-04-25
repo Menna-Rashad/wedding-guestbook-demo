@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap');
+/* خط عربي فاخر جدًا */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    font-family: 'Amiri', serif; /* خط فاخر أنيق */
+    direction: rtl; /* عشان النص يبقى من اليمين */
+    text-align: right; /* محاذاة لليمين */
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: linear-gradient(135deg, #fff1eb 0%, #fce7e6 100%);
+    min-height: 100vh;
+  }
+
+  input, textarea {
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+/* ألوان السيمون الراقية + الـ dark اللي نسيته */
+@layer utilities {
+  .bg-salmon { background-color: #FA8072; }
+  .bg-salmon-light { background-color: #FFE4E1; }
+  .bg-salmon-dark { background-color: #E55A4E; }
+  .text-salmon { color: #FA8072; }
+  .text-salmon-dark { color: #E55A4E; } /* ← أضفناه */
+  .border-salmon { border-color: #FA8072; }
+  .border-salmon-light { border-color: #FFE4E1; }
+  .hover\:bg-salmon-dark:hover { background-color: #E55A4E; }
+}
+
+/* زخارف الورد */
+.decor-flower {
+  position: absolute;
+  font-size: 3.5rem;
+  opacity: 0.18;
+  pointer-events: none;
+  animation: float 22s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(8deg); }
+}
